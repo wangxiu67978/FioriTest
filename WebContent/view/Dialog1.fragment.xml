@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		noDataText="No Products Found"
+		title="Select Product"
+		search="handleSearch"
+		confirm="_handleValueHelpClose"
+		cancle="_handleValueHelpClose"
+		items="{
+			path: '/roleSet'
+		}" >
+		<StandardListItem
+			title="{Rolename}"
+			
+			iconDensityAware="false"
+			iconInset="false"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

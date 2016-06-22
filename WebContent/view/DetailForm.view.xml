@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
+
+    Copyright (C) 2009-2013 SAP AG or an SAP affiliate company. All rights reserved
+
+--><core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:caui="sap.ca.ui"
+ xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" 
+ controllerName="sap.ui.zfioriuserM.view.DetailForm">
+ 
+	<Page class="sapUiFioriObjectPage" id="Usr_NEW_PAGE">
+		<content>
+			<l:Grid defaultSpan="L12 M12 S12" width="auto">
+				<l:content>
+					<f:SimpleForm class="editableForm" editable="true" id="oUserSimpleForm" layout="ResponsiveGridLayout" maxContainerCols="1" title="用户维护">
+						<f:content>
+							<l:Grid defaultSpan="L12 M12 S12" minWidth="1024">
+								<l:content>
+									<f:Form class="editableForm" id="oTravelForm">
+										<f:layout>
+											<f:ResponsiveGridLayout columnsL="1" columnsM="1" emptySpanL="4" emptySpanM="4" labelSpanL="3" labelSpanM="3"/>
+										</f:layout>
+										<f:formContainers>
+											<f:FormContainer expandable="true">
+												<f:FormElement id="MB_FORM_PURPOSE" visible="true">
+													<f:label>
+														<Label id="Bname1" required="true" text="�û�">
+														</Label>
+													</f:label>
+													<f:fields>
+														<Input id="Bname" showValueHelp="false" type="Text" value="{userSet1>/Bname}">
+														</Input>
+													</f:fields>
+												</f:FormElement>
+												<f:FormElement id="MB_FORM_PURPOSE2" visible="true">
+													<f:label>
+														<Label id="Uflag1" required="true" text="״̬��ʶ">
+														</Label>
+													</f:label>
+													<f:fields>
+														<Input id="Uflag" showValueHelp="false" type="Text" value="{userSet1>/Uflag}">
+														</Input>
+													</f:fields>
+												</f:FormElement>												
+                                               <f:FormElement id="MB_FORM_PURPOSE3" visible="true">
+                                              
+                                               </f:FormElement>
+											</f:FormContainer>
+										</f:formContainers>
+									</f:Form>
+								</l:content>
+							</l:Grid>
+						</f:content>
+					</f:SimpleForm>
+					
+				</l:content>
+			</l:Grid>
+							<Button
+				                    class="sapUiSmallMarginBottom" 
+				                          text="Show All Roles"
+				                       press="handleSelectDialogPress">
+				                      <customData>
+					                   <core:CustomData
+						                   key="multi"
+						                     value="true" />
+				                </customData>
+			                </Button>
+			
+				            <Table headerText="�û���ɫ" id="ROLE_LIST" inset="true" items="{userSet1&gt;/roleuserSet}">
+							<!-- 	<headerToolbar>
+									<Toolbar>
+										<Title text="Products" level="H2" />
+										<ToolbarSpacer />
+										<Button
+											icon="sap-icon://settings"
+											press="handleSelectDialogPress1" >
+									      <customData>
+					                         <core:CustomData key="multi"  value="true" />
+				                          </customData>
+										</Button>>	
+									</Toolbar>
+								</headerToolbar>	
+								-->               
+				                <items>
+				                    <ColumnListItem counter="0" unread="true">
+				                        <cells>
+				                            <Label text="{userSet1&gt;Rolename}"/>
+				                            <Button class="sapMLIBSelectD" icon="sap-icon://sys-cancel" id="SOC_REMOVE" tap="removeItem" type="Transparent"/>
+ 									 	 <!--  <Input
+											id="PRD_CHARC_VALUE"
+											class="sapUiSmallMarginBottom"
+											type="Text"
+											value="{userSet1&gt;/Rolename}"
+											enabled="true"
+											editable="true"
+											showValueHelp="true"
+											valueHelpOnly="true"
+											valueHelpRequest="OnCharcValueHelpRequest"
+										  />		 -->				                    
+				                        </cells>
+				                    </ColumnListItem>
+				                </items>
+				                
+				                <columns>
+				                 <!--     <Column demandPopin="true" hAlign="Left" width="5rem"/> -->
+				                    
+				                    <Column demandPopin="true" hAlign="Left" minScreenWidth="tablet" width="10%">
+				                        <header>
+				                            <Text maxLines="0" text="SSS" textAlign="Left" width="100%"/>
+				                        </header>
+				                    </Column>			                    
+								<!-- 	<Column demandPopin="true" hAlign="Right" width="3rem"/> -->
+								<Column demandPopin="true" hAlign="Right" width="3rem"/>
+				                </columns>
+				            </Table>	
+	            
+		</content>
+
+	</Page>
+</core:View>

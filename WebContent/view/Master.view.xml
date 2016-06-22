@@ -1,0 +1,51 @@
+<core:View xmlns:core="sap.ui.core" 
+        xmlns="sap.m"
+		controllerName="sap.ui.zfioriuserM.view.Master" >
+	<Page >
+	  <customHeader>
+		<Bar>
+			<contentLeft>
+				<Button icon="sap-icon://nav-back" tap="navBack"/>
+			</contentLeft>
+			<contentMiddle>
+				<Label id="HeaderText" text="{i18n>DISPLAY_NAME}"/>
+			</contentMiddle>
+
+		</Bar>
+	  </customHeader>
+			
+		<subHeader>
+			<Bar>
+				<contentLeft>
+					<SearchField
+						search="handleSearch"
+						placeholder="按XX搜索"
+						width="100%" >
+					</SearchField>
+				</contentLeft>
+			</Bar>
+		</subHeader>
+		<List
+			id="list"
+			mode="{device>/listMode}"
+			select="handleListSelect"
+			items="{/userSet}" >
+			<ObjectListItem
+				type="{device>/listItemType}"
+				press="handleListItemPress"
+				title="{Bname}"  
+				number="{Mandt}"
+				>
+				<attributes>
+			       <ObjectAttribute text="{Uflag}"/>
+			    </attributes>
+			</ObjectListItem>
+		</List>
+		<footer>
+			<Bar>
+				<contentRight>
+				   <Button icon="sap-icon://add" tap="USR_NEW"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page></core:View>

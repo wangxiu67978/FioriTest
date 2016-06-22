@@ -1,0 +1,10 @@
+<mvc:View height="100%" width="100%"
+  controllerName="sap.ui.zfioriuserM.view.Line"
+  xmlns:viz="sap.viz.ui5.controls" 
+  xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <ScrollContainer height="90%" width="60%" horizontal="false" vertical="true" focusable="true">
+       <viz:Popover id="idPopOver"></viz:Popover>
+       <viz:VizFrame id="idVizFrameLine" uiConfig="{applicationSet:'fiori'}" vizType="line" width="100%" height="700px">
+       </viz:VizFrame>
+    </ScrollContainer>
+</mvc:View>

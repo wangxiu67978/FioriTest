@@ -1,0 +1,90 @@
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:caui="sap.ca.ui"
+ xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" 
+ controllerName="sap.ui.zfioriuserM.view.ZMymm">
+
+	<Page
+		title="{i18n>DETAIL_TITLE} "
+		class="sapUiFioriObjectPage"
+		showNavButton="{device>/isPhone}"
+		navButtonPress="handleNavButtonPress" >
+		<l:Grid defaultSpan="L12 M12 S12" height="40%" width="auto">
+				<l:content>
+									<f:Form class="editableForm" id="oTravelForm" title="查询条件">
+										<f:layout>
+											<f:ResponsiveGridLayout columnsL="6" columnsM="6" emptySpanL="1" emptySpanM="1" labelSpanL="1" labelSpanM="1"/>
+										</f:layout>
+										<f:formContainers>
+											<f:FormContainer expandable="true">
+											  
+												<f:FormElement id="MB_FORM_PURPOSE" visible="true">
+														<Label id="SalesOrg1" required="true" textAlign="Center" text="销售组织">
+														</Label>
+													<f:fields>
+														<Input id="SalesOrg" showValueHelp="false" type="Text" value=" ">
+														</Input>
+													</f:fields>
+														<Label id="salesOut1" required="true" textAlign="Center" text="分销渠道">
+														</Label>
+													<f:fields>
+														<Input id="salesOut" showValueHelp="true" type="Text" value=" " valueHelpRequest="handleValueHelp">
+														</Input>
+													</f:fields>
+													<Label id="SalesOrg3" required="true" textAlign="Center" text="销售组织">
+														</Label>
+													<f:fields>
+														<Input id="SalesOrg4" showValueHelp="false" type="Text" value=" ">
+														</Input>
+													</f:fields>
+												</f:FormElement>
+											</f:FormContainer>
+											</f:formContainers>
+												
+										
+									</f:Form>
+							
+					
+				</l:content>
+			</l:Grid>
+		   <Table headerText="工作流信息" id="ROLE_LIST" inset="true" items="{order&gt;/workFlowSet}">
+				                <columns>
+				                    <Column demandPopin="true" hAlign="Left" minScreenWidth="tablet" width="10%">
+				                        <header>
+				                            <Text maxLines="0" text="流程节点" textAlign="Left" width="100%"/>
+				                        </header>
+				                    </Column>
+				                    <Column demandPopin="true" hAlign="Left" minScreenWidth="tablet" width="10%">
+				                        <header>
+				                            <Text maxLines="0" text="节点状态" textAlign="Left" width="100%"/>
+				                        </header>
+				                    </Column>
+				                    <Column demandPopin="true" hAlign="Left" minScreenWidth="tablet" width="10%">
+				                        <header>
+				                            <Text maxLines="0" text="处理人" textAlign="Left" width="100%"/>
+				                        </header>
+				                    </Column>			                    
+								     <Column demandPopin="true" hAlign="Left" minScreenWidth="tablet" width="10%">
+				                        <header>
+				                            <Text maxLines="0" text="操作" textAlign="Left" width="100%"/>
+				                        </header>
+				                    </Column>
+				                     <Column demandPopin="true" hAlign="Left" minScreenWidth="tablet" width="10%">
+				                        <header>
+				                            <Text maxLines="0" text="创建时间" textAlign="Left" width="100%"/>
+				                        </header>
+				                    </Column>
+				                </columns>
+				                 <items>
+				                    <ColumnListItem counter="0" unread="true">
+				                        <cells>
+				                            <Label text="{order&gt;NodeText}"/>
+ 									 	    <Label text="{order&gt;Statustext}"/>
+ 									 	    <Label text="{order&gt;AgentName}"/>
+ 									 	    <Label text="{order&gt;ResultTxt}"/>
+ 									 	    <Label text="{order&gt;WiCd}"/>     
+				                        </cells>
+				                    </ColumnListItem>
+				                    
+				                </items>
+				            </Table>	
+	</Page>
+</core:View>
