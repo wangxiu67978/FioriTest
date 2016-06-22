@@ -1,7 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:caui="sap.ca.ui"
  xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" 
  controllerName="sap.ui.zfioriuserM.view.ZMymm">
-
 	<Page
 		title="{i18n>DETAIL_TITLE} "
 		class="sapUiFioriObjectPage"
