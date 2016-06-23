@@ -43,7 +43,6 @@
                 </ScrollContainer>
             </Panel>
         </l:fixContent>
-        <!--Above is the setting panel-->
         <l:flexContent>
             <viz:Popover id="idPopOver"></viz:Popover>
             <viz:VizFrame id="idVizFrameBar" uiConfig="{applicationSet:'fiori'}" height="100%" width="100%"></viz:VizFrame>
